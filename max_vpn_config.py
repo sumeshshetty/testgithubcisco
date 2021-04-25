@@ -1,3 +1,4 @@
+import test_2
 from net_sec_lib.kasa.resource import Metadata, NamespaceKeys
 from net_sec_lib.kasa.v1.asaconfiguration import ASAConfiguration, ASAConfigurationSpec
 from net_sec_lib.kasa.resource_template import ResourceTemplate
