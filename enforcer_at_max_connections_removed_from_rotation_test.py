@@ -3,7 +3,7 @@ Name: scale_up_enfor_limit_session_test.py
 Purpose: [UPDATE ME]
 Author: sumeshet
 """
-
+import a_test_2
 import logging
 from typing import Tuple
 import time
