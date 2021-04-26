@@ -1,0 +1,97 @@
+identifier: sumeshet-86c1e1
+kasa_helm_chart_link: https://engci-maven-master.cisco.com/artifactory/asac-dev-helm-local/kasa-bundle-v0.1.0-149.tgz
+cert_helm_chart_link: https://engci-maven-master.cisco.com/artifactory/asac-dev-helm-local/cert-manager-v0.14.2.tgz
+kubeconfig_path: /Users/a124/Documents/CISCO_sumeshet/repos/kasa/kasa-scripts/sumeshet-86c1e1_aws_kubeconfig.yaml
+platform: aws
+
+openstack:
+  k8s_api_port: __KUBERNETES_CLUSTER_PORT__
+
+aws:
+  keypair_path: /Users/a124/Documents/CISCO_sumeshet/repos/kasa/kasa-scripts/vbattul.pem
+
+kasa:
+  controlplane_namespace: kasa-system
+  ssh_ip: 3.91.198.48
+  ssh_port: 22
+  ssh_username: __KASA_SSH_USERNAME__
+  ssh_pwd: __KASA_SSH_PASSWORD__
+  enable_pw: cisco
+  tenants:
+    tenant1:
+      namespace: kasa-system
+      inside_ip: 10.37.39.9
+      outside_ip: 10.37.25.180
+      outside_external_ip: __TENANT1_OUTSIDE_EXTERNAL_IP__
+      service_roles: ['default', 'vpnredirector']
+    tenant2:
+      namespace: __TENANT2_NAMESPACE__
+      inside_ip: __TENANT2_INSIDE_IP__
+      outside_ip: __TENANT2_OUTSIDE_IP__
+      outside_external_ip: __TENANT2_OUTSIDE_EXTERNAL_IP__
+      service_roles: __TENANT2_SERVICE_ROLES__
+
+control_node:
+  hostname: __CONTROL_HOSTNAME__
+  ssh_ip: __CONTROL_SSH_IP__
+  ssh_port: __CONTROL_SSH_PORT__
+  ssh_username: __CONTROL_SSH_USERNAME__
+  ssh_pwd: __CONTROL_SSH_PASSWORD__
+
+data_nodes:
+  data_node1:
+    hostname: __DATA1_HOSTNAME__
+    ssh_ip: __DATA1_SSH_IP__
+    ssh_port: __DATA1_SSH_PORT__
+    ssh_username: __DATA1_SSH_USERNAME__
+    ssh_pwd: __DATA1_SSH_PASSWORD__
+  data_node2:
+    hostname: __DATA2_HOSTNAME__
+    ssh_ip: __DATA2_SSH_IP__
+    ssh_port: __DATA2_SSH_PORT__
+    ssh_username: __DATA2_SSH_USERNAME__
+    ssh_pwd: __DATA2_SSH_PASSWORD__
+  data_node3:
+    hostname: __DATA3_HOSTNAME__
+    ssh_ip: __DATA3_SSH_IP__
+    ssh_port: __DATA3_SSH_PORT__
+    ssh_username: __DATA3_SSH_USERNAME__
+    ssh_pwd: __DATA3_SSH_PASSWORD__
+  data_node4:
+    hostname: __DATA4_HOSTNAME__
+    ssh_ip: __DATA4_SSH_IP__
+    ssh_port: __DATA4_SSH_PORT__
+    ssh_username: __DATA4_SSH_USERNAME__
+    ssh_pwd: __DATA4_SSH_PASSWORD__
+  data_node5:
+    hostname: __DATA5_HOSTNAME__
+    ssh_ip: __DATA5_SSH_IP__
+    ssh_port: __DATA5_SSH_PORT__
+    ssh_username: __DATA5_SSH_USERNAME__
+    ssh_pwd: __DATA5_SSH_PASSWORD__
+
+server:
+  ssh_ip: 35.170.232.26
+  ssh_port: 22
+  ssh_username: ec2-user
+  ssh_pwd: None
+  inside_ip: 10.37.38.126
+
+client:
+  ssh_ip: 3.227.47.35
+  ssh_port: 22
+  ssh_username: ec2-user
+  ssh_pwd: None
+  outside_ip: 10.37.27.213
+
+artifactory:
+  username: asac-automation.gen
+  dockerhub_api_key: AKCp8hz3gMHDQdMZVGp1JcjwHsANix28PKuhisVWm4BJtockpyRP5PDLVkdkUPCJvu95no9Bg
+  devhub_api_key: AKCp5fUhzmgrQCjAnCzCFaNaWGUSNGcxHG27Coqte2bS6mL8zyRQCV64PtT9KPkW67Rha3Rec
+
+cssm:
+  client_id: 39ed9651-adb3-4f7a-899e-8d9f1229aedc
+  client_secret: 06f397e7-6354-477c-ae87-31b049bd8a7d
+  account_domain: InternalTestDemoAccount8.cisco.com
+  virtual_account: kasa-automation
+  token: MDA2ZDQyYzYtYmIxZC00NjA0LWJlZGMtMzVkZjc5MTZhMDE3LTE2NDU3MTc4%0AODkxNTJ8dGxWV0tFRmhPd0NBM1NRK005Sks4OXFEU1h6azM1NmkyVkZ6V1M3%0AUHUvOD0%3D%0A
